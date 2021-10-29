@@ -6,37 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sidebar Menu</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
-      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+    <script
+      src="https://kit.fontawesome.com/0644243676.js"
       crossorigin="anonymous"
-    />
+    ></script>
   </head>
   <body>
     <div class="sidebar">
       <ul>
         <li>
-          <span class="icon"></span>
-          <span class="title">Home</span>
+          <a href="#">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="title">Home</span>
+          </a>
         </li>
         <li>
-          <span class="icon"></span>
-          <span class="title">Profile</span>
+          <a href="#">
+            <span class="icon"><i class="fas fa-user"></i></span>
+            <span class="title">Profile</span>
+          </a>
         </li>
         <li>
-          <span class="icon"></span>
-          <span class="title">Setting</span>
+          <a href="#">
+            <span class="icon"><i class="fas fa-cog"></i></span>
+            <span class="title">Setting</span>
+          </a>
         </li>
         <li>
-          <span class="icon"></span>
-          <span class="title">Help</span>
+          <a href="#">
+            <span class="icon"><i class="fas fa-question-circle"></i></span>
+            <span class="title">Help</span>
+          </a>
         </li>
         <li>
-          <span class="icon"></span>
-          <span class="title">Sign Out</span>
+          <a href="#">
+            <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+            <span class="title">Sign Out</span>
+          </a>
         </li>
       </ul>
     </div>
+    <div class="toggle" onclick="toggleMenu()"></div>
+
+    <script>
+      function toggleMenu() {
+        let nav = document.querySelector(".sidebar");
+        let toggle = document.querySelector(".toggle");
+        nav.classList.toggle("active");
+        toggle.classList.toggle("active");
+      }
+    </script>
   </body>
 </html>
